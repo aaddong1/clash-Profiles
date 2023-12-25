@@ -1,0 +1,600 @@
+t: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+proxy-providers:
+  ☸️ 一念:
+    type: http
+    url: https://cloud.changding.link/api/v1/client/subscribe?token=27d7afb31138e332a620defc1be5ebe7
+    interval: 18000
+    path: ./profiles/proxies/一念.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://1.1.1.1/generate_204
+  🚀 超级机场:
+    type: http
+    url: https://chaojiji.one/api/v1/client/subscribe?token=e7305c0c27a5968300bd14515fa25074
+    interval: 18000
+    path: ./profiles/proxies/超级机场.yaml
+    exclude-filter: "(?i)套餐|最新|更新|速度|付费|官网|到期|有效|剩余|版本|已用|过期|失联|测试|官方|网址|备用|群|TEST|客服|网站|获取|订阅|流量|机场|下次|官址|联系|邮箱|工单|学术|USE|USED|TOTAL|EXPIRE|EMAIL"
+    health-check:
+      enable: true
+      interval: 600
+      url: http://1.1.1.1/generate_204
+  🚀 freeapp:
+    type: http
+    url: https://www.freeapp.buzz/api/v1/client/subscribe?token=842f98341de27f7f591e245ed234ec9e
+    interval: 18000
+    path: ./profiles/proxies/freeapp.yaml
+    exclude-filter: "(?i)套餐|最新|更新|速度|付费|官网|到期|有效|剩余|版本|已用|过期|失联|测试|官方|网址|备用|群|TEST|客服|网站|获取|订阅|流量|机场|下次|官址|联系|邮箱|工单|学术|USE|USED|TOTAL|EXPIRE|EMAIL"
+    health-check:
+      enable: true
+      interval: 600
+      url: http://1.1.1.1/generate_204
+  🚀 便宜机场:
+    type: http
+    url: https://sub1.timeneverchanges.com/api/v1/client/subscribe?token=6329493231bb617d0d6d09f264e54432
+    interval: 18000
+    path: ./profiles/proxies/便宜机场.yaml
+    exclude-filter: "(?i)套餐|最新|更新|速度|付费|官网|到期|有效|剩余|版本|已用|过期|失联|测试|官方|网址|备用|群|TEST|客服|网站|获取|订阅|流量|机场|下次|官址|联系|邮箱|工单|学术|USE|USED|TOTAL|EXPIRE|EMAIL"
+    health-check:
+      enable: true
+      interval: 600
+      url: http://1.1.1.1/generate_204
+  🐭 二念:
+    type: http
+    url: https://suo.yt/4CnPRp5
+    interval: 18000
+    path: ./profiles/proxies/二念.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://1.1.1.1/generate_204
+  🪄 白嫖Ⅰ:
+    type: http
+    url: https://v1.chaojiji.one/api/v1/client/subscribe?token=ba912ad4a472d1b07f9b3f92d159e9a4
+    interval: 18000
+    path: ./profiles/proxies/白嫖Ⅰ.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://1.1.1.1/generate_204
+  🪄 白嫖Ⅱ:
+    type: http
+    url: https://subscription.1238520.xyz/api/v1/client/subscribe?token=a5f98ccee882df7eaed30a6c2f9e63ec
+    interval: 18000
+    path: ./profiles/proxies/白嫖Ⅱ.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://1.1.1.1/generate_204
+  🪄 白嫖Ⅲ:
+    type: http
+    url: https://mia1227.xn--3iq226gfdb94q.com/api/v1/client/subscribe?token=ce909b2ddc04a399d9dbe531c902c9b9
+    interval: 18000
+    path: ./profiles/proxies/白嫖Ⅲ.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://1.1.1.1/generate_204
+  🪄 白嫖Ⅳ:
+    type: http
+    url: https://api.kuangbiaoyun.com/api/v1/client/subscribe?token=6bf47ffb404bca1fdcf8b325abeb38ed
+    interval: 18000
+    path: ./profiles/proxies/白嫖Ⅳ.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://1.1.1.1/generate_204
+  🪄 白嫖Ⅴ:
+    type: http
+    url: https://official.b-cdn.net/v3/subscr?id=830313b5540647acb86476134a6e2ec8
+    interval: 18000
+    path: ./profiles/proxies/白嫖Ⅴ.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://1.1.1.1/generate_204
+  🪄 白嫖Ⅵ:
+    type: http
+    url: https://sub1.timeneverchanges.com/api/v1/client/subscribe?token=6329493231bb617d0d6d09f264e54432
+    interval: 18000
+    path: ./profiles/proxies/白嫖Ⅵ.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://1.1.1.1/generate_204
+  🪄 白嫖Ⅶ:
+    type: http
+    url: https://xn--04s765d.site/api/v1/client/subscribe?token=8f0c846bcd9e8eb1846a08e88add1472
+    interval: 18000
+    path: ./profiles/proxies/白嫖Ⅶ.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://1.1.1.1/generate_204
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🚀 手动切换
+      - 🎥 随便用
+      - ☸️ 一念
+      - 🚀 超级机场
+      - 🚀 freeapp
+      - 🚀 便宜机场
+      - 🐭 二念
+      - DIRECT
+  - name: 🚀 手动切换
+    type: select
+    use:
+      - 🚀 超级机场
+      - 🚀 freeapp
+      - 🚀 便宜机场
+      - 🐭 二念
+      - 🪄 白嫖Ⅰ
+      - 🪄 白嫖Ⅱ
+      - 🪄 白嫖Ⅲ
+      - 🪄 白嫖Ⅳ
+      - 🪄 白嫖Ⅴ
+      - 🪄 白嫖Ⅵ
+      - 🪄 白嫖Ⅶ
+  - name: ♻️ 自动选择
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - 🚀 超级机场
+      - 🚀 freeapp
+      - 🚀 便宜机场
+      - 🐭 二念
+      - 🪄 白嫖Ⅰ
+      - 🪄 白嫖Ⅱ
+      - 🪄 白嫖Ⅲ
+      - 🪄 白嫖Ⅳ
+      - 🪄 白嫖Ⅴ
+      - 🪄 白嫖Ⅵ
+      - 🪄 白嫖Ⅶ
+  - name: 📹 Emby
+    type: select
+    proxies:
+      - DIRECT
+      - 🎥 随便用
+      - 🚀 节点选择
+      - ☸️ 一念
+      - 🐭 二念
+      - 🚀 超级机场
+      - 🚀 freeapp
+      - 🚀 便宜机场
+  - name: 📲 Telegram
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🚀 手动切换
+      - ♻️ 自动选择
+      - 🎥 随便用
+      - ☸️ 一念
+      - 🚀 超级机场
+      - 🚀 freeapp
+      - 🚀 便宜机场
+      - 🐭 二念
+      - DIRECT
+  - name: 📹 YouTube
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🚀 手动切换
+      - ♻️ 自动选择
+      - ☸️ 一念
+      - 🚀 超级机场
+      - 🚀 freeapp
+      - 🚀 便宜机场
+      - 🐭 二念
+      - DIRECT
+  - name: 💬 OpenAi
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🚀 手动切换
+      - ♻️ 自动选择
+      - 🎥 随便用
+      - ☸️ 一念
+      - 🚀 超级机场
+      - 🚀 freeapp
+      - 🚀 便宜机场
+      - 🐭 二念
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🚀 手动切换
+      - ♻️ 自动选择
+      - ☸️ 一念
+      - 🚀 超级机场
+      - 🚀 freeapp
+      - 🚀 便宜机场
+      - 🐭 二念
+  - name: 🎥 随便用
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - 🪄 白嫖Ⅰ
+      - 🪄 白嫖Ⅱ
+      - 🪄 白嫖Ⅲ
+      - 🪄 白嫖Ⅳ
+      - 🪄 白嫖Ⅴ
+      - 🪄 白嫖Ⅵ
+      - 🪄 白嫖Ⅶ
+  - name: ☸️ 一念
+    type: url-test
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - ☸️ 一念
+    filter: "0.01"
+  - name: 🐭 二念
+    type: url-test
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - 🐭 二念
+  - name: 🎥 TikTok
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎥 随便用
+      - ☸️ 一念
+      - 🐭 二念
+  - name: 🎥 Netflix
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎥 随便用
+      - ☸️ 一念
+      - 🐭 二念
+      - DIRECT
+  - name: Ⓜ️ Microsoft
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🎥 随便用
+      - ☸️ 一念
+      - 🐭 二念
+      - 🚀 手动切换
+  - name: Ⓜ️ OneDrive
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🎥 随便用
+      - ☸️ 一念
+      - 🐭 二念
+      - 🚀 手动切换
+  - name: 🍎 Apple
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🚀 手动切换
+  - name: 🎮 Game
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🚀 手动切换
+  - name: 📢 谷歌FCM
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🎥 随便用
+      - ☸️ 一念
+      - 🐭 二念
+      - 🚀 手动切换
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎥 随便用
+      - ☸️ 一念
+      - 🐭 二念
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🌏 国内媒体
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🚀 手动切换
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+  - name: 🛑 广告拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🚀 超级机场
+    type: url-test
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - 🚀 超级机场
+  - name: 🚀 freeapp
+    type: url-test
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - 🚀 freeapp
+  - name: 🚀 便宜机场
+    type: url-test
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - 🚀 便宜机场
+rule-providers:
+  🛑 广告拦截:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising.yaml
+    path: ./profiles/rules/Advertising.yaml
+    interval: 86400
+  🍃 应用净化:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml
+    path: ./profiles/rules/BanProgramAD.yaml
+    interval: 86400
+  📢 谷歌FCM:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleFCM/GoogleFCM.yaml
+    path: ./profiles/rules/GoogleFCM.yaml
+    interval: 86400
+  Ⓜ️ OneDrive:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml
+    path: ./profiles/rules/OneDrive.yaml
+    interval: 86400
+  Ⓜ️ Microsoft:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml
+    path: ./profiles/rules/Microsoft.yaml
+    interval: 86400
+  🍎 Apple:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml
+    path: ./profiles/rules/Apple.yaml
+    interval: 86400
+  📲 Telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
+    path: ./profiles/rules/Telegram.yaml
+    interval: 86400
+  💬 OpenAi:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
+    path: ./profiles/rules/OpenAi.yaml
+    interval: 86400
+  📹 YouTube:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
+    path: ./profiles/rules/YouTube.yaml
+    interval: 86400
+  🎥 Netflix:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml
+    path: ./profiles/rules/Netflix.yaml
+    interval: 86400
+  🌏 国内媒体:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.yaml
+    path: ./profiles/rules/ChinaMedia.yaml
+    interval: 86400
+  🌍 国外媒体:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.yaml
+    path: ./profiles/rules/GlobalMedia.yaml
+    interval: 86400
+  🚀 节点选择:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml
+    path: ./profiles/rules/ProxyGFWlist.yaml
+    interval: 86400
+  🎮 Game:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml
+    path: ./profiles/rules/Game.yaml
+    interval: 86400
+  ChinaMax:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.yaml
+    path: ./profiles/rules/ChinaMax.yaml
+    interval: 86400
+  🎥 TikTok:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml
+    path: ./profiles/rules/TikTok.yaml
+    interval: 86400
+rules:
+  - DOMAIN-SUFFIX,emby.aca.best,📹 Emby
+  - DOMAIN-SUFFIX,porn.aca.best,📹 Emby
+  - DOMAIN-SUFFIX,cc.ccemby.tk,📹 Emby
+  - DOMAIN-SUFFIX,line.emby.men,📹 Emby
+  - DOMAIN-SUFFIX,mius.uk,📹 Emby
+  - DOMAIN-SUFFIX,emby.flowercloud,📹 Emby
+  - DOMAIN-SUFFIX,emby.immtel.com,📹 Emby
+  - DOMAIN-SUFFIX,agahk1.jmsooo.com,📹 Emby
+  - DOMAIN-SUFFIX,agasg1.jmsooo.com,📹 Emby
+  - DOMAIN-SUFFIX,agajp1.jmsooo.com,📹 Emby
+  - DOMAIN-SUFFIX,aws.jmsooo.com,📹 Emby
+  - DOMAIN-SUFFIX,ntt1.jmsooo.com,📹 Emby
+  - DOMAIN-SUFFIX,hinet.jmsooo.com,📹 Emby
+  - DOMAIN-SUFFIX,cf1.jmsooo.com,📹 Emby
+  - DOMAIN-SUFFIX,ju.dog,📹 Emby
+  - IP-CIDR,202.61.255.248/32,📹 Emby,no-resolve
+  - DOMAIN-SUFFIX,charontv.com,📹 Emby
+  - DOMAIN-SUFFIX,misakaf.org,📹 Emby
+  - DOMAIN-SUFFIX,push-kr.cfprefer3.xyz,📹 Emby
+  - DOMAIN-SUFFIX,mjjemby.org,📹 Emby
+  - DOMAIN-SUFFIX,emby.maying.club,📹 Emby
+  - DOMAIN-SUFFIX,ntrrr.am.sb,📹 Emby
+  - DOMAIN-SUFFIX,emby.nexitally.com,📹 Emby
+  - DOMAIN-SUFFIX,direct.nebula-emby.com,📹 Emby
+  - DOMAIN-SUFFIX,cf.odysseyplus.site,📹 Emby
+  - DOMAIN-SUFFIX,agahk.odysseyplus.site,📹 Emby
+  - DOMAIN-SUFFIX,agasg.odysseyplus.site,📹 Emby
+  - DOMAIN-SUFFIX,ru.odysseyplus.site,📹 Emby
+  - DOMAIN-SUFFIX,pilipiliultra.top,📹 Emby
+  - DOMAIN-SUFFIX,pilipiliultra.com,📹 Emby
+  - DOMAIN-SUFFIX,pornemby.club,📹 Emby
+  - DOMAIN-SUFFIX,poloemby.xyz,📹 Emby
+  - DOMAIN-SUFFIX,pololine.ml,📹 Emby
+  - DOMAIN-SUFFIX,embyplus.club,📹 Emby
+  - DOMAIN-SUFFIX,emby.cjpc.cc,📹 Emby
+  - DOMAIN-SUFFIX,emby.prprcloud.com,📹 Emby
+  - DOMAIN-SUFFIX,emby.plusmedia.site,📹 Emby
+  - DOMAIN-SUFFIX,emby-cf.plusmedia.site,📹 Emby
+  - DOMAIN-SUFFIX,emby-sg.plusmedia.site,📹 Emby
+  - DOMAIN-SUFFIX,stream.synn.cc,📹 Emby
+  - DOMAIN,notnetflix.cos.cat,📹 Emby
+  - DOMAIN-SUFFIX,emby.cn2gias.uk,📹 Emby
+  - DOMAIN-SUFFIX,post.cn2gias.uk,📹 Emby
+  - DOMAIN-SUFFIX,123456.al,📹 Emby
+  - DOMAIN-SUFFIX,embyclub.com,📹 Emby
+  - DOMAIN-SUFFIX,az-hk.embyclub.com,📹 Emby
+  - DOMAIN-SUFFIX,azsgp.embyclub.com,📹 Emby
+  - DOMAIN-SUFFIX,emby.xeton.dev,📹 Emby
+  - DOMAIN-SUFFIX,jellyfin.xeton.dev,📹 Emby
+  - DOMAIN-SUFFIX,movie.xeton.dev,📹 Emby
+  - DOMAIN-SUFFIX,servers.xeton.dev,📹 Emby
+  - DOMAIN-SUFFIX,emby.ytoo.li,📹 Emby
+  - DOMAIN-SUFFIX,emby.mdss.cloud,📹 Emby
+  - DOMAIN-SUFFIX,embyserver.ga,📹 Emby
+  - DOMAIN-SUFFIX,emby.nyancat.net,📹 Emby
+  - DOMAIN-SUFFIX,emby.otakudrive.life,📹 Emby
+  - DOMAIN-SUFFIX,emby2.otakudrive.life,📹 Emby
+  - DOMAIN-SUFFIX,emby.run,📹 Emby
+  - DOMAIN-SUFFIX,emby.wtf,📹 Emby
+  - DOMAIN-SUFFIX,pub1back.emby.wtf,📹 Emby
+  - DOMAIN-SUFFIX,pub2back.emby.wtf,📹 Emby
+  - DOMAIN-SUFFIX,pub3back.emby.wtf,📹 Emby
+  - DOMAIN-SUFFIX,pub1.emby.wtf,📹 Emby
+  - DOMAIN-SUFFIX,pub2.emby.wtf,📹 Emby
+  - DOMAIN-SUFFIX,pub3.emby.wtf,📹 Emby
+  - DOMAIN-SUFFIX,emby.p-p.men,📹 Emby
+  - DOMAIN-SUFFIX,emby.aiyowei.ml,📹 Emby
+  - DOMAIN-SUFFIX,gfwemby.org,📹 Emby
+  - DOMAIN-SUFFIX,loseremby.org,📹 Emby
+  - DOMAIN-SUFFIX,magpie.cyou,📹 Emby
+  - DOMAIN-SUFFIX,speedx.one,📹 Emby
+  - DOMAIN-SUFFIX,embymv.tk,📹 Emby
+  - DOMAIN-SUFFIX,bddup.com,📹 Emby
+  - DOMAIN-SUFFIX,emby.cl,📹 Emby
+  - DOMAIN-SUFFIX,emby.ml,📹 Emby
+  - DOMAIN-SUFFIX,nivod4.tv,📹 Emby
+  - DOMAIN-SUFFIX,newpppp.com,📹 Emby
+  - DOMAIN-SUFFIX,freetz.top,📹 Emby
+  - DOMAIN-SUFFIX,newwan.top,📹 Emby
+  - DOMAIN-SUFFIX,shuipo.lol,📹 Emby
+  - DOMAIN-SUFFIX,dicarerhome.com,📹 Emby
+  - DOMAIN-SUFFIX,emby77.cf,📹 Emby
+  - DOMAIN-SUFFIX,embyplus.org,📹 Emby
+  - IP-CIDR,188.172.228.49/32,📹 Emby,no-resolve
+  - DOMAIN-SUFFIX,embytv.cf,📹 Emby
+  - DOMAIN-SUFFIX,zox.show,📹 Emby
+  - DOMAIN-SUFFIX,acemby.org,📹 Emby
+  - DOMAIN-SUFFIX,bili.rip,📹 Emby
+  - DOMAIN-SUFFIX,misty.ltd,📹 Emby
+  - DOMAIN-SUFFIX,ednovas.org,📹 Emby
+  - DOMAIN-SUFFIX,deja-vu.beauty,📹 Emby
+  - DOMAIN-SUFFIX,studyfun.live,📹 Emby
+  - DOMAIN-SUFFIX,gtlx.org,📹 Emby
+  - DOMAIN-SUFFIX,9191001.xyz,📹 Emby
+  - DOMAIN-SUFFIX,carlos.trade,📹 Emby
+  - DOMAIN-SUFFIX,agon.cf,📹 Emby
+  - DOMAIN-SUFFIX,imetyou.top,📹 Emby
+  - DOMAIN-SUFFIX,goodisp.org,📹 Emby
+  - DOMAIN-SUFFIX,emby77.org,📹 Emby
+  - DOMAIN-SUFFIX,emby.eu.org,📹 Emby
+  - DOMAIN-SUFFIX,wiri.tk,📹 Emby
+  - DOMAIN-SUFFIX,285286.xyz,📹 Emby
+  - DOMAIN-SUFFIX,zi0.icu,📹 Emby
+  - DOMAIN-SUFFIX,bangumi.ca,📹 Emby
+  - DOMAIN-SUFFIX,emby.kim,📹 Emby
+  - DOMAIN-SUFFIX,4545.cf,📹 Emby
+  - DOMAIN-SUFFIX,ggtt.cf,📹 Emby
+  - DOMAIN-SUFFIX,mulgore.net,📹 Emby
+  - DOMAIN-SUFFIX,happyav.eu.org,📹 Emby
+  - DOMAIN-SUFFIX,emby.pro,📹 Emby
+  - DOMAIN-SUFFIX,xiaoyi.one,📹 Emby
+  - DOMAIN-SUFFIX,embymv.me,📹 Emby
+  - DOMAIN-SUFFIX,infinityfly.top,📹 Emby
+  - DOMAIN-SUFFIX,lucasmedia.top,📹 Emby
+  - DOMAIN-SUFFIX,nvidia.rip,📹 Emby
+  - DOMAIN-SUFFIX,emby77.org,📹 Emby
+  - DOMAIN-SUFFIX,20120714.xyz,📹 Emby
+  - DOMAIN-SUFFIX,gugumedia.link,📹 Emby
+  - DOMAIN-SUFFIX,dicarerhome.com,📹 Emby
+  - DOMAIN-SUFFIX,starcat.eu.org,📹 Emby
+  - DOMAIN-SUFFIX,catlinks.co.uk,📹 Emby
+  - DOMAIN-SUFFIX,emby.ws,📹 Emby
+  - DOMAIN-SUFFIX,ohhhh.org,📹 Emby
+  - DOMAIN-SUFFIX,xmsl.org,📹 Emby
+  - DOMAIN-SUFFIX,9521732.xyz,📹 Emby
+  - DOMAIN-KEYWORD,emby,📹 Emby
+  - RULE-SET,🛑 广告拦截,🛑 广告拦截
+  - RULE-SET,🍃 应用净化,🍃 应用净化
+  - RULE-SET,📢 谷歌FCM,📢 谷歌FCM
+  - RULE-SET,Ⓜ️ OneDrive,Ⓜ️ OneDrive
+  - RULE-SET,Ⓜ️ Microsoft,Ⓜ️ Microsoft
+  - RULE-SET,🍎 Apple,🍎 Apple
+  - RULE-SET,📲 Telegram,📲 Telegram
+  - RULE-SET,💬 OpenAi,💬 OpenAi
+  - RULE-SET,📹 YouTube,📹 YouTube
+  - RULE-SET,🎥 Netflix,🎥 Netflix
+  - RULE-SET,🎥 TikTok,🎥 TikTok
+  - RULE-SET,🎮 Game,🎮 Game
+  - RULE-SET,🌍 国外媒体,🌍 国外媒体
+  - RULE-SET,🚀 节点选择,🚀 节点选择
+  - RULE-SET,ChinaMax,🎯 全球直连
+  - RULE-SET,🌏 国内媒体,🌏 国内媒体
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
