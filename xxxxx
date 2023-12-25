@@ -7,7 +7,7 @@ external-controller: :9090
 proxy-providers:
   ☸️ 一念:
     type: http
-    url: https://cloud.changding.link/api/v1/client/subscribe?token=27d7afb31138e332a620defc1be5ebe7
+    url: https://v1.mk/2ITOsyY
     interval: 18000
     path: ./profiles/proxies/一念.yaml
     health-check:
