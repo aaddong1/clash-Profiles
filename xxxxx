@@ -250,6 +250,7 @@ proxy-groups:
     tolerance: 50
     use:
       - 🐭 二念
+    filter: "0.1"
   - name: 🎥 TikTok
     type: select
     proxies:
