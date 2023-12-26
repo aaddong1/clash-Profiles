@@ -242,7 +242,6 @@ proxy-groups:
     tolerance: 50
     use:
       - ☸️ 一念
-    filter: "0.01"
   - name: 🐭 二念
     type: url-test
     url: http://1.1.1.1/generate_204
@@ -250,7 +249,7 @@ proxy-groups:
     tolerance: 50
     use:
       - 🐭 二念
-    filter: "0.1"
+    filter: "0.1|0.01"
   - name: 🎥 TikTok
     type: select
     proxies:
