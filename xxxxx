@@ -55,7 +55,7 @@ proxy-providers:
       url: http://1.1.1.1/generate_204
   🪄 白嫖Ⅰ:
     type: http
-    url: https://v1.chaojiji.one/api/v1/client/subscribe?token=ba912ad4a472d1b07f9b3f92d159e9a4
+    url: http://subscribe.csyun.xyz/api/v1/client/subscribe?token=26d53491371bc4742178ba3c4ee82c92
     interval: 18000
     path: ./profiles/proxies/白嫖Ⅰ.yaml
     health-check:
@@ -100,7 +100,7 @@ proxy-providers:
       url: http://1.1.1.1/generate_204
   🪄 白嫖Ⅵ:
     type: http
-    url: https://sub1.timeneverchanges.com/api/v1/client/subscribe?token=6329493231bb617d0d6d09f264e54432
+    url: https://dd.xny.gay/api/v1/client/subscribe?token=6562424b6468bfc553c7de8f1ddc9bb3
     interval: 18000
     path: ./profiles/proxies/白嫖Ⅵ.yaml
     health-check:
