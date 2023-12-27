@@ -1,9 +1,141 @@
-t: 7890
-socks-port: 7891
+mixed-port: 7890
 allow-lan: true
 mode: Rule
-log-level: info
-external-controller: :9090
+log-level: debug
+external-controller: 127.0.0.1:9090
+secret: "123456"
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  listen: 0.0.0.0:7874
+
+  nameserver:
+    - "https://dns.google/dns-query#🚀 节点选择"
+    - "https://dns.cloudflare.com/dns-query#🚀 节点选择"
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://dns.pub/dns-query
+  nameserver-policy:
+    'geosite: cn,private':
+      - tls://119.29.29.29
+      - tls://223.5.5.5
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time-ios.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - "+.pool.ntp.org"
+    - time1.cloud.tencent.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - "+.qq.com"
+    - "+.tencent.com"
+    - "+.srv.nintendo.net"
+    - "*.n.n.srv.nintendo.net"
+    - "+.stun.playstation.net"
+    - xbox.*.*.microsoft.com
+    - "*.*.xboxlive.com"
+    - xbox.*.microsoft.com
+    - xnotify.xboxlive.com
+    - "+.battlenet.com.cn"
+    - "+.wotgame.cn"
+    - "+.wggames.cn"
+    - "+.wowsgame.cn"
+    - "+.wargaming.net"
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - "+.stun.*.*"
+    - "+.stun.*.*.*"
+    - "+.stun.*.*.*.*"
+    - "+.stun.*.*.*.*.*"
+    - heartbeat.belkin.com
+    - "*.linksys.com"
+    - "*.linksyssmartwifi.com"
+    - "*.router.asus.com"
+    - mesu.apple.com
+    - swscan.apple.com
+    - swquery.apple.com
+    - swdownload.apple.com
+    - swcdn.apple.com
+    - swdist.apple.com
+    - lens.l.google.com
+    - stun.l.google.com
+    - na.b.g-tun.com
+    - "+.nflxvideo.net"
+    - "*.square-enix.com"
+    - "*.finalfantasyxiv.com"
+    - "*.ffxiv.com"
+    - "*.ff14.sdo.com"
+    - ff.dorado.sdo.com
+    - "*.mcdn.bilivideo.cn"
+    - "+.media.dssott.com"
+    - shark007.net
+    - Mijia Cloud
+    - "+.cmbchina.com"
+    - "+.cmbimg.com"
+    - local.adguard.org
+    - "+.sandai.net"
+    - "+.n0808.com"
+
 proxy-providers:
   ☸️ 一念:
     type: http
@@ -453,139 +585,20 @@ rule-providers:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml
     path: ./profiles/rules/TikTok.yaml
     interval: 86400
+  📹 Emby:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/aaddong1/clash-Profiles/main/Emby
+    path: ./profiles/rules/Emby.yaml
+    interval: 86400
 rules:
-  - DOMAIN-SUFFIX,emby.aca.best,📹 Emby
-  - DOMAIN-SUFFIX,porn.aca.best,📹 Emby
-  - DOMAIN-SUFFIX,cc.ccemby.tk,📹 Emby
-  - DOMAIN-SUFFIX,line.emby.men,📹 Emby
-  - DOMAIN-SUFFIX,mius.uk,📹 Emby
-  - DOMAIN-SUFFIX,emby.flowercloud,📹 Emby
-  - DOMAIN-SUFFIX,emby.immtel.com,📹 Emby
-  - DOMAIN-SUFFIX,agahk1.jmsooo.com,📹 Emby
-  - DOMAIN-SUFFIX,agasg1.jmsooo.com,📹 Emby
-  - DOMAIN-SUFFIX,agajp1.jmsooo.com,📹 Emby
-  - DOMAIN-SUFFIX,aws.jmsooo.com,📹 Emby
-  - DOMAIN-SUFFIX,ntt1.jmsooo.com,📹 Emby
-  - DOMAIN-SUFFIX,hinet.jmsooo.com,📹 Emby
-  - DOMAIN-SUFFIX,cf1.jmsooo.com,📹 Emby
-  - DOMAIN-SUFFIX,ju.dog,📹 Emby
-  - IP-CIDR,202.61.255.248/32,📹 Emby,no-resolve
-  - DOMAIN-SUFFIX,charontv.com,📹 Emby
-  - DOMAIN-SUFFIX,misakaf.org,📹 Emby
-  - DOMAIN-SUFFIX,push-kr.cfprefer3.xyz,📹 Emby
-  - DOMAIN-SUFFIX,mjjemby.org,📹 Emby
-  - DOMAIN-SUFFIX,emby.maying.club,📹 Emby
-  - DOMAIN-SUFFIX,ntrrr.am.sb,📹 Emby
-  - DOMAIN-SUFFIX,emby.nexitally.com,📹 Emby
-  - DOMAIN-SUFFIX,direct.nebula-emby.com,📹 Emby
-  - DOMAIN-SUFFIX,cf.odysseyplus.site,📹 Emby
-  - DOMAIN-SUFFIX,agahk.odysseyplus.site,📹 Emby
-  - DOMAIN-SUFFIX,agasg.odysseyplus.site,📹 Emby
-  - DOMAIN-SUFFIX,ru.odysseyplus.site,📹 Emby
-  - DOMAIN-SUFFIX,pilipiliultra.top,📹 Emby
-  - DOMAIN-SUFFIX,pilipiliultra.com,📹 Emby
-  - DOMAIN-SUFFIX,pornemby.club,📹 Emby
-  - DOMAIN-SUFFIX,poloemby.xyz,📹 Emby
-  - DOMAIN-SUFFIX,pololine.ml,📹 Emby
-  - DOMAIN-SUFFIX,embyplus.club,📹 Emby
-  - DOMAIN-SUFFIX,emby.cjpc.cc,📹 Emby
-  - DOMAIN-SUFFIX,emby.prprcloud.com,📹 Emby
-  - DOMAIN-SUFFIX,emby.plusmedia.site,📹 Emby
-  - DOMAIN-SUFFIX,emby-cf.plusmedia.site,📹 Emby
-  - DOMAIN-SUFFIX,emby-sg.plusmedia.site,📹 Emby
-  - DOMAIN-SUFFIX,stream.synn.cc,📹 Emby
-  - DOMAIN,notnetflix.cos.cat,📹 Emby
-  - DOMAIN-SUFFIX,emby.cn2gias.uk,📹 Emby
-  - DOMAIN-SUFFIX,post.cn2gias.uk,📹 Emby
-  - DOMAIN-SUFFIX,123456.al,📹 Emby
-  - DOMAIN-SUFFIX,embyclub.com,📹 Emby
-  - DOMAIN-SUFFIX,az-hk.embyclub.com,📹 Emby
-  - DOMAIN-SUFFIX,azsgp.embyclub.com,📹 Emby
-  - DOMAIN-SUFFIX,emby.xeton.dev,📹 Emby
-  - DOMAIN-SUFFIX,jellyfin.xeton.dev,📹 Emby
-  - DOMAIN-SUFFIX,movie.xeton.dev,📹 Emby
-  - DOMAIN-SUFFIX,servers.xeton.dev,📹 Emby
-  - DOMAIN-SUFFIX,emby.ytoo.li,📹 Emby
-  - DOMAIN-SUFFIX,emby.mdss.cloud,📹 Emby
-  - DOMAIN-SUFFIX,embyserver.ga,📹 Emby
-  - DOMAIN-SUFFIX,emby.nyancat.net,📹 Emby
-  - DOMAIN-SUFFIX,emby.otakudrive.life,📹 Emby
-  - DOMAIN-SUFFIX,emby2.otakudrive.life,📹 Emby
-  - DOMAIN-SUFFIX,emby.run,📹 Emby
-  - DOMAIN-SUFFIX,emby.wtf,📹 Emby
-  - DOMAIN-SUFFIX,pub1back.emby.wtf,📹 Emby
-  - DOMAIN-SUFFIX,pub2back.emby.wtf,📹 Emby
-  - DOMAIN-SUFFIX,pub3back.emby.wtf,📹 Emby
-  - DOMAIN-SUFFIX,pub1.emby.wtf,📹 Emby
-  - DOMAIN-SUFFIX,pub2.emby.wtf,📹 Emby
-  - DOMAIN-SUFFIX,pub3.emby.wtf,📹 Emby
-  - DOMAIN-SUFFIX,emby.p-p.men,📹 Emby
-  - DOMAIN-SUFFIX,emby.aiyowei.ml,📹 Emby
-  - DOMAIN-SUFFIX,gfwemby.org,📹 Emby
-  - DOMAIN-SUFFIX,loseremby.org,📹 Emby
-  - DOMAIN-SUFFIX,magpie.cyou,📹 Emby
-  - DOMAIN-SUFFIX,speedx.one,📹 Emby
-  - DOMAIN-SUFFIX,embymv.tk,📹 Emby
-  - DOMAIN-SUFFIX,bddup.com,📹 Emby
-  - DOMAIN-SUFFIX,emby.cl,📹 Emby
-  - DOMAIN-SUFFIX,emby.ml,📹 Emby
-  - DOMAIN-SUFFIX,nivod4.tv,📹 Emby
-  - DOMAIN-SUFFIX,newpppp.com,📹 Emby
-  - DOMAIN-SUFFIX,freetz.top,📹 Emby
-  - DOMAIN-SUFFIX,newwan.top,📹 Emby
-  - DOMAIN-SUFFIX,shuipo.lol,📹 Emby
-  - DOMAIN-SUFFIX,dicarerhome.com,📹 Emby
-  - DOMAIN-SUFFIX,emby77.cf,📹 Emby
-  - DOMAIN-SUFFIX,embyplus.org,📹 Emby
-  - IP-CIDR,188.172.228.49/32,📹 Emby,no-resolve
-  - DOMAIN-SUFFIX,embytv.cf,📹 Emby
-  - DOMAIN-SUFFIX,zox.show,📹 Emby
-  - DOMAIN-SUFFIX,acemby.org,📹 Emby
-  - DOMAIN-SUFFIX,bili.rip,📹 Emby
-  - DOMAIN-SUFFIX,misty.ltd,📹 Emby
-  - DOMAIN-SUFFIX,ednovas.org,📹 Emby
-  - DOMAIN-SUFFIX,deja-vu.beauty,📹 Emby
-  - DOMAIN-SUFFIX,studyfun.live,📹 Emby
-  - DOMAIN-SUFFIX,gtlx.org,📹 Emby
-  - DOMAIN-SUFFIX,9191001.xyz,📹 Emby
-  - DOMAIN-SUFFIX,carlos.trade,📹 Emby
-  - DOMAIN-SUFFIX,agon.cf,📹 Emby
-  - DOMAIN-SUFFIX,imetyou.top,📹 Emby
-  - DOMAIN-SUFFIX,goodisp.org,📹 Emby
-  - DOMAIN-SUFFIX,emby77.org,📹 Emby
-  - DOMAIN-SUFFIX,emby.eu.org,📹 Emby
-  - DOMAIN-SUFFIX,wiri.tk,📹 Emby
-  - DOMAIN-SUFFIX,285286.xyz,📹 Emby
-  - DOMAIN-SUFFIX,zi0.icu,📹 Emby
-  - DOMAIN-SUFFIX,bangumi.ca,📹 Emby
-  - DOMAIN-SUFFIX,emby.kim,📹 Emby
-  - DOMAIN-SUFFIX,4545.cf,📹 Emby
-  - DOMAIN-SUFFIX,ggtt.cf,📹 Emby
-  - DOMAIN-SUFFIX,mulgore.net,📹 Emby
-  - DOMAIN-SUFFIX,happyav.eu.org,📹 Emby
-  - DOMAIN-SUFFIX,emby.pro,📹 Emby
-  - DOMAIN-SUFFIX,xiaoyi.one,📹 Emby
-  - DOMAIN-SUFFIX,embymv.me,📹 Emby
-  - DOMAIN-SUFFIX,infinityfly.top,📹 Emby
-  - DOMAIN-SUFFIX,lucasmedia.top,📹 Emby
-  - DOMAIN-SUFFIX,nvidia.rip,📹 Emby
-  - DOMAIN-SUFFIX,emby77.org,📹 Emby
-  - DOMAIN-SUFFIX,20120714.xyz,📹 Emby
-  - DOMAIN-SUFFIX,gugumedia.link,📹 Emby
-  - DOMAIN-SUFFIX,dicarerhome.com,📹 Emby
-  - DOMAIN-SUFFIX,starcat.eu.org,📹 Emby
-  - DOMAIN-SUFFIX,catlinks.co.uk,📹 Emby
-  - DOMAIN-SUFFIX,emby.ws,📹 Emby
-  - DOMAIN-SUFFIX,ohhhh.org,📹 Emby
-  - DOMAIN-SUFFIX,xmsl.org,📹 Emby
-  - DOMAIN-SUFFIX,9521732.xyz,📹 Emby
-  - DOMAIN-KEYWORD,emby,📹 Emby
   - RULE-SET,🛑 广告拦截,🛑 广告拦截
   - RULE-SET,🍃 应用净化,🍃 应用净化
   - RULE-SET,📢 谷歌FCM,📢 谷歌FCM
   - RULE-SET,Ⓜ️ OneDrive,Ⓜ️ OneDrive
   - RULE-SET,Ⓜ️ Microsoft,Ⓜ️ Microsoft
   - RULE-SET,🍎 Apple,🍎 Apple
+  - RULE-SET,📹 Emby,📹 Emby
   - RULE-SET,📲 Telegram,📲 Telegram
   - RULE-SET,💬 OpenAi,💬 OpenAi
   - RULE-SET,📹 YouTube,📹 YouTube
