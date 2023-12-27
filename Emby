@@ -1,5 +1,9 @@
 payload:
   - DOMAIN-SUFFIX,s.ii00.cc
+  - DOMAIN-SUFFIX,emby.at
+  - DOMAIN,line1.emby.at
+  - DOMAIN,line2.emby.at
+  - DOMAIN,line3.emby.at
   - DOMAIN-SUFFIX,emby.aca.best
   - DOMAIN-SUFFIX,porn.aca.best
   - DOMAIN-SUFFIX,cc.ccemby.tk
