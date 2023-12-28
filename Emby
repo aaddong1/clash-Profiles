@@ -5,6 +5,8 @@ payload:
   - DOMAIN,line2.emby.at
   - DOMAIN,line3.emby.at
   - DOMAIN-SUFFIX,cherrytv.one
+  - DOMAIN-SUFFIX,emby3.mcjoker
+#⇡自己加的
   - DOMAIN-SUFFIX,emby.aca.best
   - DOMAIN-SUFFIX,porn.aca.best
   - DOMAIN-SUFFIX,cc.ccemby.tk
