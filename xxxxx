@@ -178,7 +178,7 @@ proxy-providers:
       url: http://1.1.1.1/generate_204
   🐭 二念:
     type: http
-    url: https://suo.yt/4CnPRp5
+    url: https://raw.githubusercontent.com/wentao883/TG-wxgqlfx_ZDY/main/pdyjdy_ZDY
     interval: 18000
     path: ./profiles/proxies/二念.yaml
     health-check:
@@ -205,7 +205,7 @@ proxy-providers:
       url: http://1.1.1.1/generate_204
   🪄 白嫖Ⅲ:
     type: http
-    url: https://mia1227.xn--3iq226gfdb94q.com/api/v1/client/subscribe?token=ce909b2ddc04a399d9dbe531c902c9b9
+    url: https://chiguayun.buzz/api/v1/client/subscribe?token=90bece3b44180294a09981e707cc6b8b
     interval: 18000
     path: ./profiles/proxies/白嫖Ⅲ.yaml
     health-check:
@@ -252,22 +252,12 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - ♻️ 自动选择
-      - 🚀 手动切换
-      - 🎥 随便用
+      - 🐭 二念
       - ☸️ 一念
+      - 🎥 随便用
       - 🚀 超级机场
       - 🚀 freeapp
       - 🚀 便宜机场
-      - 🐭 二念
-      - DIRECT
-  - name: 🚀 手动切换
-    type: select
-    use:
-      - 🚀 超级机场
-      - 🚀 freeapp
-      - 🚀 便宜机场
-      - 🐭 二念
       - 🪄 白嫖Ⅰ
       - 🪄 白嫖Ⅱ
       - 🪄 白嫖Ⅲ
@@ -275,17 +265,29 @@ proxy-groups:
       - 🪄 白嫖Ⅴ
       - 🪄 白嫖Ⅵ
       - 🪄 白嫖Ⅶ
-  - name: ♻️ 自动选择
-    type: load-balance
-    strategy: consistent-hashing
-    url: http://1.1.1.1/generate_204
-    interval: 120
-    tolerance: 50
-    use:
+      - 🇭🇰 香港
+      - 🇸🇬 狮城
+      - 🇯🇵 日本
+      - 🇺🇲 美国
+      - DIRECT
+  - name: 🥅 兜底
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ☸️ 一念
+      - 🐭 二念
       - 🚀 超级机场
       - 🚀 freeapp
       - 🚀 便宜机场
+      - DIRECT
+  - name: 🎉 QAQ
+    type: select
+    proxies:
+      - ☸️ 一念
       - 🐭 二念
+      - 🚀 超级机场
+      - 🚀 freeapp
+      - 🚀 便宜机场
       - 🪄 白嫖Ⅰ
       - 🪄 白嫖Ⅱ
       - 🪄 白嫖Ⅲ
@@ -296,20 +298,14 @@ proxy-groups:
   - name: 📹 Emby
     type: select
     proxies:
+      - 🎉 QAQ
       - DIRECT
       - 🎥 随便用
       - 🚀 节点选择
-      - ☸️ 一念
-      - 🐭 二念
-      - 🚀 超级机场
-      - 🚀 freeapp
-      - 🚀 便宜机场
   - name: 📲 Telegram
     type: select
     proxies:
       - 🚀 节点选择
-      - 🚀 手动切换
-      - ♻️ 自动选择
       - 🎥 随便用
       - ☸️ 一念
       - 🚀 超级机场
@@ -320,39 +316,26 @@ proxy-groups:
   - name: 📹 YouTube
     type: select
     proxies:
+      - 🎥 随便用
       - 🚀 节点选择
-      - 🚀 手动切换
-      - ♻️ 自动选择
+      - 🎉 QAQ
       - ☸️ 一念
+      - 🐭 二念
       - 🚀 超级机场
       - 🚀 freeapp
       - 🚀 便宜机场
-      - 🐭 二念
       - DIRECT
   - name: 💬 OpenAi
     type: select
     proxies:
       - 🚀 节点选择
-      - 🚀 手动切换
-      - ♻️ 自动选择
       - 🎥 随便用
       - ☸️ 一念
+      - 🐭 二念
       - 🚀 超级机场
       - 🚀 freeapp
       - 🚀 便宜机场
-      - 🐭 二念
       - DIRECT
-  - name: 🐟 漏网之鱼
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🚀 手动切换
-      - ♻️ 自动选择
-      - ☸️ 一念
-      - 🚀 超级机场
-      - 🚀 freeapp
-      - 🚀 便宜机场
-      - 🐭 二念
   - name: 🎥 随便用
     type: load-balance
     strategy: consistent-hashing
@@ -367,28 +350,12 @@ proxy-groups:
       - 🪄 白嫖Ⅴ
       - 🪄 白嫖Ⅵ
       - 🪄 白嫖Ⅶ
-  - name: ☸️ 一念
-    type: url-test
-    url: http://1.1.1.1/generate_204
-    interval: 120
-    tolerance: 50
-    use:
-      - ☸️ 一念
-  - name: 🐭 二念
-    type: url-test
-    url: http://1.1.1.1/generate_204
-    interval: 120
-    tolerance: 50
-    use:
-      - 🐭 二念
-    filter: "0.1|0.01"
   - name: 🎥 TikTok
     type: select
     proxies:
-      - 🚀 节点选择
-      - 🎥 随便用
-      - ☸️ 一念
-      - 🐭 二念
+      - 🇯🇵 日本
+      - 🇺🇲 美国
+      - 🇸🇬 狮城
   - name: 🎥 Netflix
     type: select
     proxies:
@@ -405,7 +372,7 @@ proxy-groups:
       - 🎥 随便用
       - ☸️ 一念
       - 🐭 二念
-      - 🚀 手动切换
+      - 🎉 QAQ
   - name: Ⓜ️ OneDrive
     type: select
     proxies:
@@ -414,19 +381,19 @@ proxy-groups:
       - 🎥 随便用
       - ☸️ 一念
       - 🐭 二念
-      - 🚀 手动切换
+      - 🎉 QAQ
   - name: 🍎 Apple
     type: select
     proxies:
       - DIRECT
       - 🚀 节点选择
-      - 🚀 手动切换
+      - 🎉 QAQ
   - name: 🎮 Game
     type: select
     proxies:
       - DIRECT
       - 🚀 节点选择
-      - 🚀 手动切换
+      - 🎉 QAQ
   - name: 📢 谷歌FCM
     type: select
     proxies:
@@ -435,23 +402,75 @@ proxy-groups:
       - 🎥 随便用
       - ☸️ 一念
       - 🐭 二念
-      - 🚀 手动切换
+      - 🎉 QAQ
   - name: 🌍 国外媒体
     type: select
     proxies:
-      - 🚀 节点选择
-      - ♻️ 自动选择
       - 🎥 随便用
-      - ☸️ 一念
-      - 🐭 二念
-      - 🚀 手动切换
+      - 🎉 QAQ
       - DIRECT
+    filter: "(Japan).*(0.2)"
+  - name: 🇭🇰 香港
+    type: url-test
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - 🪄 白嫖Ⅰ
+      - 🪄 白嫖Ⅱ
+      - 🪄 白嫖Ⅲ
+      - 🪄 白嫖Ⅳ
+      - 🪄 白嫖Ⅴ
+      - 🪄 白嫖Ⅵ
+      - 🪄 白嫖Ⅶ
+    filter: "港|HK|hk|Hong Kong|HongKong|hongkong"
+  - name: 🇸🇬 狮城
+    type: url-test
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - 🪄 白嫖Ⅰ
+      - 🪄 白嫖Ⅱ
+      - 🪄 白嫖Ⅲ
+      - 🪄 白嫖Ⅳ
+      - 🪄 白嫖Ⅴ
+      - 🪄 白嫖Ⅵ
+      - 🪄 白嫖Ⅶ
+    filter: "新加坡|坡|狮城|SG|Singapore"
+  - name: 🇯🇵 日本
+    type: url-test
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - 🪄 白嫖Ⅰ
+      - 🪄 白嫖Ⅱ
+      - 🪄 白嫖Ⅲ
+      - 🪄 白嫖Ⅳ
+      - 🪄 白嫖Ⅴ
+      - 🪄 白嫖Ⅵ
+      - 🪄 白嫖Ⅶ
+    filter: "日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan"
+  - name: 🇺🇲 美国
+    type: url-test
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - 🪄 白嫖Ⅰ
+      - 🪄 白嫖Ⅱ
+      - 🪄 白嫖Ⅲ
+      - 🪄 白嫖Ⅳ
+      - 🪄 白嫖Ⅴ
+      - 🪄 白嫖Ⅵ
+      - 🪄 白嫖Ⅶ
   - name: 🌏 国内媒体
     type: select
     proxies:
       - DIRECT
       - 🚀 节点选择
-      - 🚀 手动切换
+      - 🎉 QAQ
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -488,6 +507,70 @@ proxy-groups:
     tolerance: 50
     use:
       - 🚀 便宜机场
+  - name: ☸️ 一念
+    type: url-test
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - ☸️ 一念
+  - name: 🐭 二念
+    type: url-test
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - 🐭 二念
+    filter: "0.1|0.01"
+  - name: 🪄 白嫖Ⅰ
+    type: url-test
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - 🪄 白嫖Ⅰ
+  - name: 🪄 白嫖Ⅱ
+    type: url-test
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - 🪄 白嫖Ⅱ
+  - name: 🪄 白嫖Ⅲ
+    type: url-test
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - 🪄 白嫖Ⅲ
+  - name: 🪄 白嫖Ⅳ
+    type: url-test
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - 🪄 白嫖Ⅳ
+  - name: 🪄 白嫖Ⅴ
+    type: url-test
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - 🪄 白嫖Ⅴ
+  - name: 🪄 白嫖Ⅵ
+    type: url-test
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - 🪄 白嫖Ⅵ
+  - name: 🪄 白嫖Ⅶ
+    type: url-test
+    url: http://1.1.1.1/generate_204
+    interval: 120
+    tolerance: 50
+    use:
+      - 🪄 白嫖Ⅶ
 rule-providers:
   🛑 广告拦截:
     type: http
@@ -610,4 +693,4 @@ rules:
   - RULE-SET,ChinaMax,🎯 全球直连
   - RULE-SET,🌏 国内媒体,🌏 国内媒体
   - GEOIP,CN,🎯 全球直连
-  - MATCH,🐟 漏网之鱼
+  - MATCH,🥅 兜底
