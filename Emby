@@ -6,7 +6,7 @@ payload:
   - DOMAIN,line3.emby.at
   - DOMAIN-SUFFIX,cherrytv.one
   - DOMAIN-SUFFIX,emby3.mcjoker.xyz
-  - DOMAIN-SUFFIX,push-kr.misakaf.org
+  - DOMAIN,push-kr.misakaf.org
   - IP-CIDR,5.78.86.228/32 
   - IP-CIDR,5.78.78.136/32
   - IP-CIDR,5.78.103.111/32
