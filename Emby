@@ -6,7 +6,7 @@ payload:
   - DOMAIN,line3.emby.at
   - DOMAIN-SUFFIX,cherrytv.one
   - DOMAIN-SUFFIX,emby3.mcjoker.xyz
-#⇡自己加的
+#------(分割线)
   - DOMAIN-SUFFIX,emby.aca.best
   - DOMAIN-SUFFIX,porn.aca.best
   - DOMAIN-SUFFIX,cc.ccemby.tk
