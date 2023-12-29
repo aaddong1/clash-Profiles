@@ -12,6 +12,7 @@ payload:
   - IP-CIDR,5.78.103.111/32
   - IP-CIDR,5.78.94.83/32
   - IP-CIDR,5.78.113.91/32
+  - IP-CIDR,102.223.180.108
 #------(分割线)
   - DOMAIN-SUFFIX,emby.aca.best
   - DOMAIN-SUFFIX,porn.aca.best
