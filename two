@@ -127,11 +127,6 @@ bp: &bp
 
 hy: &hy
   use: [ACA, Wen, M78, 飞鸟, 卷王]
-
-all: &all
-  use: [001, 002, 003, 004, 005, 006, 007, ACA, Wen, M78, 飞鸟, 卷王, 一念, 二念, 超级, freeapp, 白嫖驿站]
-
-
 #---------------------------------------------------# 
 #Meta内核配置，其他内核可能无法使用
 ipv6: false
@@ -270,7 +265,7 @@ proxy-groups:
   - {name: 🎯 全球直连, type: select, proxies: [DIRECT, 🚀 节点选择, 🎉 QAQ]}
   - {name: 🛑 广告拦截, type: select, proxies: [REJECT, DIRECT]}
   - {name: 🍃 应用净化, type: select, proxies: [REJECT, DIRECT]}
-  - {name: 🤖 ChatGPT, type: select, <<: *all, filter: "(?i)GPT", exclude-filter: "GPT实验性"}
+  - {name: 🤖 ChatGPT, type: select, .*, filter: "(?i)GPT", exclude-filter: "GPT实验性"}
 
   
   
