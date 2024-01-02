@@ -10,6 +10,7 @@ payload:
   - DOMAIN-SUFFIX,ss.809688.xyz
   - DOMAIN-SUFFIX,sm.809688.xyz
   - DOMAIN-SUFFIX,emby.cn2gias.uk
+  - DOMAIN-SUFFIX,src-emby.cn2gias.uk
 #------(分割线)
   - DOMAIN-SUFFIX,emby.aca.best
   - DOMAIN-SUFFIX,porn.aca.best
